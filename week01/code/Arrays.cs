@@ -13,7 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // Step 1: Create an array with the size specified by length.
+        // Step 2: Loop through each position of the array.
+        // Step 3: Calculate the multiple using number and the position.
+        // Step 4: Store the calculated multiple in the array.
+        // Step 5: Return the completed array.
+        double[] multiples = new double[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            multiples[i] = number * (i + 1);
+        }
+
+        return multiples; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +41,16 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        // Step 1: Use the amount value to determine how to split the list into two parts.
+        // Step 2: Calculate the first part using the list count and amount, and store it in a variable.
+        // Step 3: Calculate the last part and store it in another variable.
+        // Step 4: Clear the original list after saving both parts.
+        // Step 5: Add the last part first, followed by the first part.
+        List<int> firstPart = data.GetRange(0, data.Count - amount);
+        List<int> lastPart = data.GetRange(data.Count - amount, amount);
+        data.Clear();
+        data.AddRange(lastPart);
+        data.AddRange(firstPart);
     }
 }
